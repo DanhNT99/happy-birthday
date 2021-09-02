@@ -9,20 +9,20 @@ body {
   line-height: 1;
   margin: 0 auto;
   font-weight: 600;
-  position: relative;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  max-width: 575px;
+  margin: 0 auto;
 }
 
 .help {
-  width: 60%;
   position: fixed;
   top: 0;
   left: 50%;
-  padding: 20px 10px;
+  padding: 20px 20px;
   text-align: center;
   -webkit-transform: translate(-50%, -100%);
           transform: translate(-50%, -100%);
@@ -37,15 +37,17 @@ body {
 
 @-webkit-keyframes showHelp {
   100% {
-    -webkit-transform: translate(-50%, 200px);
-            transform: translate(-50%, 200px);
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    top: 20%;
   }
 }
 
 @keyframes showHelp {
   100% {
-    -webkit-transform: translate(-50%, 200px);
-            transform: translate(-50%, 200px);
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    top: 20%;
   }
 }
 
@@ -6113,7 +6115,7 @@ img {
   background: url("../images/bg.jpg");
   height: 100%;
   width: 100%;
-  position: absolute;
+  position: relative;
 }
 
 .person-title {
@@ -6203,7 +6205,6 @@ img {
 }
 
 .day {
-  margin-top: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6243,13 +6244,13 @@ img {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 95%;
-  height: 50%;
   overflow: hidden;
   pointer-events: none;
+  min-height: 350px;
 }
 
 .letters-img {
-  height: 100%;
+  min-height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
